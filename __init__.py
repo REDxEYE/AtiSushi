@@ -39,10 +39,10 @@ def so2_load(operator, filepath: str, files: list[str]):
             }
             data_size = get_buffer_size_from_texture_format(texture.width, texture.height * texture.layers,
                                                             tmp[texture.pixel_format])
-            image = create_image_data(Path(texture.name).stem, texture.data[:data_size], texture.width,
-                                      texture.height * texture.layers,
-                                      tmp[texture.pixel_format],
-                                      True)
+            image = create_image_from_data(Path(texture.name).stem, texture.data[:data_size], texture.width,
+                                           texture.height * texture.layers,
+                                           tmp[texture.pixel_format],
+                                           True)
             if image is None:
                 operator.report({"ERROR"}, f"Failed to load {Path(texture.name).stem}")
             image.use_fake_user = True
