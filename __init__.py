@@ -99,7 +99,7 @@ plugin_info = {
     "name": "ATI Sushi Chef",
     "id": "ATISushiChef",
     "description": "Import ATI Sushi engine assets",
-    "version": (0, 1, 0),
+    "version": (0, 1, 1),
     "loaders": [
         {
             "name": "Load .so2 file",
